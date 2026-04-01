@@ -1,11 +1,13 @@
 import React from 'react'
 
 import './App.css'
-import Card from './component/Card'
+// import Card from './component/Card'
+import UseState from './State/UseState'
 
 const App = () => {
   return (
-    <Card/>
+    // <Card/>
+    <UseState/>
   )
 }
 
