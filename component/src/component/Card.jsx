@@ -41,12 +41,12 @@ const Card = () => {
 
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-stone-900 to-black flex flex-wrap justify-center items-center gap-8 p-6">
+    <div className="min-h-screen w-full bg-linear-to-br from-stone-900 to-black flex flex-wrap justify-center items-center gap-8 p-6">
 
   {flowersData.map((flower, index) => (
     
     <div
-      key={index}
+      key={index+1}
       className="group w-72 rounded-2xl overflow-hidden bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg hover:shadow-2xl transition duration-500"
     >
 
@@ -79,7 +79,7 @@ const Card = () => {
 
       {/* Glow Effect */}
       <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none 
-      ${flower.inStock ? "bg-gradient-to-r from-emerald-400/20 to-green-500/20" : "bg-gradient-to-r from-red to-pink-500/20"} 
+      ${flower.inStock ? "bg-linear-to-r from-emerald-400/20 to-green-500/20" : "bg-gradient-to-r from-red to-pink-500/20"} 
        
       blur-xl`}></div>
 
