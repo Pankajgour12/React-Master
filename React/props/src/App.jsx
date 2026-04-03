@@ -45,7 +45,7 @@ const handleFriend = (clickIndex) => {
     return prev.map((item, index) => {
       if (index === clickIndex) {
 
-        // 🔥 yahin alert lagana hai
+        
         if (!item.friend) {
           alert(`${item.name} is now your friend`);
         }
