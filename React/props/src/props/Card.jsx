@@ -1,14 +1,9 @@
 import React from 'react'
 
-const Card = ({name,profession,image}) => {
+const Card = ({values ,handleClick ,index}) => {
+    const {name,profession,image,friend} = values;
 
- const alerted = ()=>{
-    return(
-       alert(`${name} is added to your friend list`)
-    )
     
-
- }
 
   return (
     <div className='w-52 bg-stone-700 rounded-xl overflow-hidden '>
@@ -23,11 +18,11 @@ const Card = ({name,profession,image}) => {
           <h5 className='text-red-100 text-xl'>{profession}</h5>
 
           <button 
-          onClick={alerted}
+          onClick={()=>handleClick(index)}
           type='button'
-          className='px-3  mt-4 py-1 text-sm text-white bg-black hover:bg-blue-500 font-semibold rounded-md'>
+          className={`px-3  mt-4 py-1 text-sm text-black ${friend?"bg-green-400":"bg-blue-600"}  font-semibold rounded-md`}>
 
-          add friend
+          { friend ? "Remove friend" : "Add friend"}
           </button>
 
 
