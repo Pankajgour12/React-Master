@@ -1,35 +1,34 @@
-import React from 'react'
+import React from "react";
 
-const Card = ({values ,handleClick ,index}) => {
-    const {name,profession,image,friend} = values;
-
-    
+const Card = ({ person, handleFriend, index }) => {
+  const { name, profession, image, friend } = person;
 
   return (
-    <div className='w-52 bg-stone-700 rounded-xl overflow-hidden '>
-        <div className='w-full h-40 bg-stone-600 rounded-2xl overflow-hidden'>
-            <img src={image} 
-            className='w-full h-full object-cover'
-            
-             alt="img" />
-        </div>
-        <div className='w-full p-5 flex flex-col justify-between gap-2 items-start'>
-          <h2 className='text-2xl text-shadow-amber-50 text-stone-100'>{name}</h2>
-          <h5 className='text-red-100 text-xl'>{profession}</h5>
+    <div className="w-64  bg-stone-800 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition">
+      
+      <div className=" h-56">
+        <img
+          src={`${image}?w=400&h=400&fit=crop`}
+          alt={name}
+          className="w-full h-full object-cover"
+        />
+      </div>
 
-          <button 
-          onClick={()=>handleClick(index)}
-          type='button'
-          className={`px-3  mt-4 py-1 text-sm text-black ${friend?"bg-green-400":"bg-blue-600"}  font-semibold rounded-md`}>
+      <div className="p-4 flex flex-col gap-2">
+        <h1 className="text-xl font-bold">{name}</h1>
+        <h4 className="text-sm text-amber-300">{profession}</h4>
 
-          { friend ? "Remove friend" : "Add friend"}
-          </button>
-
-
-        </div>
-        
+        <button
+          onClick={() => handleFriend(index)}
+          className={`mt-3 py-1 rounded-lg text-sm font-semibold transition ${
+            friend ? "bg-green-500" : "bg-blue-500"
+          }`}
+        >
+          {friend ? "Friend ✓" : "Add Friend"}
+        </button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

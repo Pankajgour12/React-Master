@@ -1,9 +1,10 @@
-import { useState } from "react";
-import "./App.css";
-import Card from "./props/Card";
+import React, { useState } from 'react'
+import './App.css'
+import Card from './props/Card'
 
-function App() {
-  const peopleData = [
+const App = () => {
+
+ const peopleData = [
   {
     name: "Aarav Sharma",
     profession: "Software Engineer",
@@ -37,45 +38,42 @@ function App() {
   }
 ];
 
+const [people, setPeople] = useState(peopleData)
 
-const [realdata ,setRealdata] = useState(peopleData);
+const handleFriend = (clickIndex) => {
+  setPeople((prev) => {
+    return prev.map((item, index) => {
+      if (index === clickIndex) {
 
-const handleClick = (ClickIndex) => {
+        // 🔥 yahin alert lagana hai
+        if (!item.friend) {
+          alert(`${item.name} is now your friend`);
+        }
 
-  setRealdata((prev)=>{
-    return prev.map((item,index)=>{
-      if(index === ClickIndex){
-        return {...item,friend:!item.friend}
+        return { ...item, friend: !item.friend };
       }
 
-      return item
-    })
-  })
+      return item;
+    });
+  });
+};
 
-  
+return (
+  <div className='bg-stone-900 min-h-screen text-amber-100 flex items-center flex-wrap gap-6 p-6 justify-center'>
+    
+    {people.map((person, index) => (
+      <Card 
+        key={index} 
+        person={person} 
+        handleFriend={handleFriend} 
+        index={index} 
+      />
+    ))}
 
+  </div>
+)
+
+ 
 }
 
-
-
-
-
-
-  return (
-    <div>
-      <div className="min-h-screen flex justify-center bg-stone-800 items-center flex-col gap-10 text-stone-300">
-        <h1 className="text-5xl ">This is props</h1>
-
-        <div className="flex flex-wrap gap-3">
-          {realdata?.map((item,index)=>(
-            <Card key={index} handleClick={handleClick} index={index} values = {item}/>
-          ))}
-          
-
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default App;
+export default App
