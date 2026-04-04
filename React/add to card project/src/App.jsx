@@ -81,7 +81,7 @@ function App() {
     });
   };
 const favCount = gane.filter(song => song.added).length;
-console.log(favCount)
+// console.log(favCount)
 
   return (
     <div className="min-h-screen bg-stone-900 text-amber-100 p-1 ">

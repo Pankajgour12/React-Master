@@ -2,6 +2,7 @@ import React from "react";
 
 const Card = ({ song, handleClick, index }) => {
   const { songName, artistName, image, added } = song;
+  
 
   
   return (
