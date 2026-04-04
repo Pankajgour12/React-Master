@@ -70,16 +70,23 @@ function App() {
   const [gane, setGane] = useState(songs);
 
   const handleClick = (songIndex) => {
-    setGane((prev) => {
-      return prev.map((song, index) => {
-        if (index === songIndex) {
-          return { ...song, added: !song.added };
+  setGane((prev) => {
+    return prev.map((song, index) => {
+      if (index === songIndex) {
+
+        if (!song.added) {
+          alert(`${song.songName} is added to fav.`);
         }
 
-        return song;
-      });
+        return { ...song, added: !song.added };
+      }
+
+      return song;
     });
-  };
+  });
+};
+
+
 const favCount = gane.filter(song => song.added).length;
 // console.log(favCount)
 
