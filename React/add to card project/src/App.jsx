@@ -1,121 +1,103 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import Card from "./component/Card";
+import Navbar from "./component/Navbar";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const songs = [
+    {
+      songName: "Chaleya",
+      artistName: "Arijit Singh",
+      image: "https://loremflickr.com/200/200/music,singer?lock=1",
+      added: false,
+    },
+    {
+      songName: "Apna Bana Le",
+      artistName: "Arijit Singh",
+      image: "https://loremflickr.com/200/200/romantic,music?lock=2",
+      added: false,
+    },
+    {
+      songName: "Husn",
+      artistName: "Anuv Jain",
+      image: "https://loremflickr.com/200/200/indie,artist?lock=3",
+      added: false,
+    },
+    {
+      songName: "Raataan Lambiyan",
+      artistName: "Jubin Nautiyal",
+      image: "https://loremflickr.com/200/200/love,concert?lock=4",
+      added: false,
+    },
+    {
+      songName: "Choo Lo",
+      artistName: "The Local Train",
+      image: "https://loremflickr.com/200/200/band,performance?lock=5",
+      added: false,
+    },
+    {
+      songName: "Kun Faya Kun",
+      artistName: "A.R. Rahman",
+      image: "https://loremflickr.com/200/200/sufi,music?lock=6",
+      added: false,
+    },
+    {
+      songName: "O Maahi",
+      artistName: "Arijit Singh",
+      image: "https://loremflickr.com/200/200/romantic,singer?lock=7",
+      added: false,
+    },
+    {
+      songName: "Maan Meri Jaan",
+      artistName: "King",
+      image: "https://loremflickr.com/200/200/rapper,stage?lock=8",
+      added: false,
+    },
+    {
+      songName: "Heeriye",
+      artistName: "Arijit Singh",
+      image: "https://loremflickr.com/200/200/couple,music?lock=9",
+      added: false,
+    },
+    {
+      songName: "Tum Hi Ho",
+      artistName: "Arijit Singh",
+      image: "https://loremflickr.com/200/200/sad,song?lock=10",
+      added: false,
+    },
+  ];
+
+  const [gane, setGane] = useState(songs);
+
+  const handleClick = (songIndex) => {
+    setGane((prev) => {
+      return prev.map((song, index) => {
+        if (index === songIndex) {
+          return { ...song, added: !song.added };
+        }
+
+        return song;
+      });
+    });
+  };
+const favCount = gane.filter(song => song.added).length;
+console.log(favCount)
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+    <div className="min-h-screen bg-stone-900 text-amber-100 p-1 ">
+      <Navbar favCount={favCount} />
+      <div className="flex flex-wrap max-w-7xl mx-auto mt-10">
+        {gane?.map((song, index) => (
+          <Card
+            key={index}
+            handleClick={handleClick}
+            index={index}
+            song={song}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
