@@ -8,20 +8,20 @@ function App() {
 
   const [users, setUsers] = useState([
    
-    
   ])
 
 
   return (
  <div className='w-full h-screen bg-stone-500 flex flex-col items-center justify-center'>
-    <div className="w-full max-w-5xl mx-auto">
-       <Cards users={users} />
-       <Form/>
-     </div>
+  
+  <div className="w-full max-w-5xl h-[80vh]  rounded-lg p-4 flex flex-col">
     
-   
+    <Cards users={users} />
+    <Form />
 
- </div>
+  </div>
+
+</div>
   )
 }
 
