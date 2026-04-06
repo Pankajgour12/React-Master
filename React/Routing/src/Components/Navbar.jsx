@@ -11,8 +11,22 @@ function Navbar() {
       >
         Home
       </NavLink>
-      <Link to="/about">About</Link>
-      <Link to="/contact">Contact</Link>
+       <NavLink
+        to="/about"
+        style={( e ) => ({
+          color: e.isActive ? "oklch(64.6% 0.222 41.116) " : "black",
+        })}
+      >
+       About
+      </NavLink>
+     <NavLink
+        to="/contact"
+        style={( e ) => ({
+          color: e.isActive ? "oklch(64.6% 0.222 41.116) " : "black",
+        })}
+      >
+        Contact
+      </NavLink>
     </div>
   );
 }
