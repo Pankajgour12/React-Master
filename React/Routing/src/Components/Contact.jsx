@@ -1,18 +1,36 @@
-
 const Contact = () => {
   return (
-    <div className=' w-full flex max-w-7xl mx-auto  mt-10 '>
-        <div>
-           <h1 className='text-4xl text-rose-400'> Contact Page</h1>
-           <p className='text-2xl mt-2'>This is Contact Page. 
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, modi!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut natus unde sed corrupti, odit sint, quia vitae quaerat dolorum tempore ipsum nemo laudantium. Expedita mollitia facere harum excepturi sed dignissimos!
-           </p>
+    <div className="min-h-[80vh] flex items-center justify-center px-6">
+      
+      <div className="bg-white shadow-lg rounded-xl p-8 w-full max-w-md">
+        <h1 className="text-3xl font-bold text-rose-500 mb-4 text-center">
+          Contact Us
+        </h1>
 
-           <button className='px-4 py-2 bg-gray-200 mt-4 rounded-md hover:bg-gray-300'>Know More</button>
-        </div>
+        <input
+          type="text"
+          placeholder="Your Name"
+          className="w-full border p-2 rounded mb-3"
+        />
+
+        <input
+          type="email"
+          placeholder="Your Email"
+          className="w-full border p-2 rounded mb-3"
+        />
+
+        <textarea
+          placeholder="Message"
+          className="w-full border p-2 rounded max-h-32 mb-4"
+        />
+
+        <button className="w-full bg-rose-500 text-white py-2 rounded hover:bg-rose-600 transition">
+          Send Message
+        </button>
+      </div>
+
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

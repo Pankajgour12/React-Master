@@ -1,19 +1,21 @@
-import React from 'react'
-
 const About = () => {
   return (
-     <div className='w-full flex max-w-7xl mx-auto  mt-10 '>
-        <div>
-           <h1 className='text-4xl text-rose-400'> About Page</h1>
-           <p className='text-2xl mt-2'>This is About Page. 
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, modi!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut natus unde sed corrupti, odit sint, quia vitae quaerat dolorum tempore ipsum nemo laudantium. Expedita mollitia facere harum excepturi sed dignissimos!
-           </p>
+    <div className="min-h-[80vh] flex items-center justify-center px-6">
+      
+      <div className="bg-white shadow-lg rounded-xl p-8 max-w-2xl text-center">
+        <h1 className="text-4xl font-bold text-rose-500">About Us</h1>
 
-           <button className='px-4 py-2 bg-gray-200 mt-4 rounded-md hover:bg-gray-300'>Know More</button>
-        </div>
+        <p className="text-gray-600 mt-4">
+          We build scalable and modern web applications using React and latest technologies.
+        </p>
+
+        <button className="mt-6 px-5 py-2 bg-gray-800 text-white rounded-md hover:bg-gray-900 transition">
+          Learn More
+        </button>
+      </div>
+
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
