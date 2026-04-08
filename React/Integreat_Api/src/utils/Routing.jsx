@@ -3,7 +3,7 @@ import Home from "../pages/Home"
 import Services from "../pages/Services"
 import Show from "../pages/Show"
 
-const Router = () => {
+const Routing = () => {
   return (
     <Routes>
         <Route path="/" element={<Home />} />
@@ -14,4 +14,4 @@ const Router = () => {
   )
 }
 
-export default Router
+export default Routing
