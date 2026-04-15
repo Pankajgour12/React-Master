@@ -11,8 +11,9 @@ function App() {
     <h1>this is app component</h1>
 
 
+   
    </div>
   )
 }
 
-export default App
+export default App;
