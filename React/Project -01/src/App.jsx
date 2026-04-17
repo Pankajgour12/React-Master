@@ -26,7 +26,7 @@ function App() {
    className='px-4 py-2 rounded-md bg-fuchsia-800 border-amber-100'>Increment</button>
    <button onClick={()=>{
     dispatch(decrement())
-     dispatch(increment())
+    
 
 
     
