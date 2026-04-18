@@ -9,14 +9,22 @@ export const counterSlice = createSlice({
     reducers: {
         increment: (state) => {
             state.value += 1;
+            
         },
         decrement: (state) => {
-            state.value -= 1;
+            if(state.value <= 0 ){
+                 alert("you can't this ")
+                
+            }else{
+            state.value -= 1;}
         },
+        incrementByAmount:(state,actions)=>{
+            state.value +=actions.payload
+        }
         
     },
 });
 
-export const { increment, decrement } = counterSlice.actions;
+export const { increment, decrement,incrementByAmount } = counterSlice.actions;
 
 export default counterSlice.reducer;    
