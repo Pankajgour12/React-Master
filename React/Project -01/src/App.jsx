@@ -22,24 +22,7 @@ function App() {
       <h1 className='text-5xl font-bold text-yellow-400'>
         {count}
       </h1>
-
-      <div className='flex gap-4'>
-        <button
-          onClick={() => dispatch(increment())}
-          className='px-6 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition'
-        >
-          +
-        </button>
-
-        <button
-          onClick={() => dispatch(decrement())}
-          className='px-6 py-2 rounded-lg bg-red-600 hover:bg-red-700 transition'
-        >
-          -
-        </button>
-      </div>
-
-      <div className='flex gap-3 items-center'>
+       <div className='flex gap-3 items-center'>
         <input
           type="number"
           className='px-4 py-2 rounded-md border text-black w-24 text-center'
@@ -57,6 +40,24 @@ function App() {
           Add
         </button>
       </div>
+
+      <div className='flex gap-4'>
+        <button
+          onClick={() => dispatch(increment())}
+          className='px-6 py-2 rounded-lg bg-green-600 hover:bg-green-700 transition'
+        >
+          +
+        </button>
+
+        <button
+          onClick={() => dispatch(decrement())}
+          className='px-6 py-2 rounded-lg bg-red-600 hover:bg-red-700 transition'
+        >
+          -
+        </button>
+      </div>
+
+     
 
     </div>
   )
