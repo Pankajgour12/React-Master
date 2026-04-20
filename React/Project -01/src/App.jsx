@@ -22,24 +22,6 @@ function App() {
       <h1 className='text-5xl font-bold text-yellow-400'>
         {count}
       </h1>
-       <div className='flex gap-3 items-center'>
-        <input
-          type="number"
-          className='px-4 py-2 rounded-md border text-black w-24 text-center'
-          value={num}
-          onChange={(e) => {
-            const value = e.target.value;
-            setNum(value === "" ? 0 : Number(value));
-          }}
-        />
-
-        <button
-          onClick={handleAdd}
-          className='px-5 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition'
-        >
-          Add
-        </button>
-      </div>
 
       <div className='flex gap-4'>
         <button
@@ -57,7 +39,24 @@ function App() {
         </button>
       </div>
 
-     
+      <div className='flex gap-3 items-center'>
+        <input
+          type="number"
+          className='px-4 py-2 rounded-md border text-black w-24 text-center'
+          value={num}
+          onChange={(e) => {
+            const value = e.target.value;
+            setNum(value === "" ? 0 : Number(value));
+          }}
+        />
+
+        <button
+          onClick={handleAdd}
+          className='px-5 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition'
+        >
+          Add
+        </button>
+      </div>
 
     </div>
   )
