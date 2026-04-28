@@ -1,4 +1,4 @@
-## Namaste React Course by Akshay Saini
+
 
 # Episode 04 - Talk is Cheap, show me the code
 
