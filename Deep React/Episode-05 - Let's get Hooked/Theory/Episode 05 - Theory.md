@@ -49,6 +49,7 @@ export const MyComponent2 = () => {}
 export const MyComponent3 = () => {}
 ```
 
+
 and the component is imported from MyComponent.js file like:
 
 ```
