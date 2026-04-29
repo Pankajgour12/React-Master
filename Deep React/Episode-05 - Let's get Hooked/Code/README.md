@@ -11,6 +11,4 @@
 
 ## [Food App Filter Feature](https://food-app-filter-feature-vasu.netlify.app/)
 
-## References:
 
-- [Akshay Saini Code Link](https://bitbucket.org/namastedev/namaste-react-live/src/master/)
