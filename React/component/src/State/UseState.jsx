@@ -58,7 +58,7 @@ const UseState = () => {
         </button>
       </div>
 
-      <div className="bg-gray-100 px-2 flex flex-col justify-center items-center gap-3 text-black">
+      <div className="bg-gray-100 px-2 flex  justify-center items-center gap-3 text-black">
         {data.map((item, i) => (
           <h1 key={i} className="text-xl">
             {item}
