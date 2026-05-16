@@ -84,7 +84,7 @@ const UseState = () => {
       </button>
 
       {/* TEXT COUNTER */}
-      {/*  <div className=" flex flex-col justify-center items-center gap-4 bg-gray-100 text-white">
+       <div className=" flex flex-col justify-center items-center gap-4 bg-gray-100 text-white">
       
      
       <input
@@ -104,7 +104,7 @@ const UseState = () => {
         Characters: {text.length}
       </p>
 
-    </div> */}
+    </div> 
     </div>
   );
 };
